@@ -10,7 +10,7 @@
     "prepare": "simple-git-hooks"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   },
   "lint-staged": {
     "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
@@ -21,19 +21,18 @@
     "pre-commit": "npx lint-staged"
   },
   "dependencies": {
-    "@modern-js/runtime": "2",
+    "@modern-js/runtime": "3",
     "echarts": "^6.0.0",
-    "react": "18",
-    "react-dom": "18",
-    "react-router-dom": "^7.13.0"
+    "react": "19",
+    "react-dom": "19"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@modern-js/app-tools": "2",
-    "@modern-js/tsconfig": "2",
+    "@modern-js/app-tools": "3",
+    "@modern-js/tsconfig": "3",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "19",
+    "@types/react-dom": "19",
     "lint-staged": "~15.4.0",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1",
