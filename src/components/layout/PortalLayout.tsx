@@ -1,6 +1,6 @@
-import { Outlet } from '@modern-js/runtime/router';
 import PortalNavbar from '@/components/portal/PortalNavbar';
 import PortalFooter from '@/components/portal/PortalFooter';
+import AnimatedOutlet from '@/components/ui/AnimatedOutlet';
 import './PortalLayout.css';
 
 export default function PortalLayout() {
@@ -8,7 +8,7 @@ export default function PortalLayout() {
     <div className="portal-layout">
       <PortalNavbar />
       <div className="portal-content">
-        <Outlet />
+        <AnimatedOutlet />
       </div>
       <PortalFooter />
     </div>

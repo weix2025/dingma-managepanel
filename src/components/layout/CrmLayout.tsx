@@ -1,6 +1,6 @@
-import { Outlet } from '@modern-js/runtime/router';
 import CrmSidebar from '@/components/crm/CrmSidebar';
 import CrmTopbar from '@/components/crm/CrmTopbar';
+import AnimatedOutlet from '@/components/ui/AnimatedOutlet';
 import './CrmLayout.css';
 
 export default function CrmLayout() {
@@ -10,7 +10,7 @@ export default function CrmLayout() {
       <div className="crm-main-area">
         <CrmTopbar />
         <div className="crm-content">
-          <Outlet />
+          <AnimatedOutlet />
         </div>
       </div>
     </div>

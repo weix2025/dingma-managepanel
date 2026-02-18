@@ -8,7 +8,7 @@ echarts.use([BarChart, PieChart, LineChart, RadarChart, GridComponent, TooltipCo
 
 export function useECharts(option: echarts.EChartsCoreOption) {
   const ref = useRef<HTMLDivElement>(null);
-  const inst = useRef<echarts.ECharts>();
+  const inst = useRef<echarts.ECharts>(null);
 
   useEffect(() => {
     if (!ref.current) return;

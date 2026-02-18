@@ -1,6 +1,6 @@
-import { Outlet } from '@modern-js/runtime/router';
 import AdminSidebar from '@/components/admin/AdminSidebar';
 import AdminNavbar from '@/components/admin/AdminNavbar';
+import AnimatedOutlet from '@/components/ui/AnimatedOutlet';
 import './AdminLayout.css';
 
 export default function AdminLayout() {
@@ -9,7 +9,7 @@ export default function AdminLayout() {
       <AdminSidebar />
       <div className="admin-main">
         <AdminNavbar />
-        <div className="admin-content"><Outlet /></div>
+        <div className="admin-content"><AnimatedOutlet /></div>
       </div>
     </div>
   );

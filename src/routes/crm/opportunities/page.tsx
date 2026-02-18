@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { toast } from 'sonner';
 import Tabs from '@/components/ui/Tabs';
 import SearchInput from '@/components/ui/SearchInput';
 import Button from '@/components/ui/Button';
@@ -27,10 +28,10 @@ const columns = [
   { key: 'sourceDetail', title: '线上来源详情', width: 120 },
   { key: 'ops', title: '操作', width: 200, render: (_: unknown, row: Record<string, unknown>) => (
     <div className="opp-ops">
-      <button type="button">编辑</button>
-      <button type="button">跟进</button>
-      <button type="button">转移</button>
-      <button type="button" className="danger">删除</button>
+      <button type="button" onClick={() => toast.info('编辑功能开发中')}>编辑</button>
+      <button type="button" onClick={() => toast.success('已添加跟进记录')}>跟进</button>
+      <button type="button" onClick={() => toast.info('转移功能开发中')}>转移</button>
+      <button type="button" className="danger" onClick={() => toast.error('删除功能开发中')}>删除</button>
     </div>
   )},
 ];

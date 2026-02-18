@@ -1,16 +1,19 @@
 import { useState } from 'react';
+import { DndContext, closestCenter, type DragEndEvent } from '@dnd-kit/core';
+import { SortableContext, verticalListSortingStrategy, useSortable, arrayMove } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
 import CrmThreeColLayout from '@/components/layout/CrmThreeColLayout';
 import Toggle from '@/components/ui/Toggle';
 import './page.css';
 
-const navItems = [
-  { icon: '🏠', label: '首页' },
-  { icon: '📋', label: '线索' },
-  { icon: '👥', label: '客户' },
-  { icon: '💼', label: '商机' },
-  { icon: '📊', label: '仪表板' },
-  { icon: '📦', label: '产品' },
-  { icon: '⚙️', label: '系统' },
+const initNavItems = [
+  { id: '1', icon: '🏠', label: '首页' },
+  { id: '2', icon: '📋', label: '线索' },
+  { id: '3', icon: '👥', label: '客户' },
+  { id: '4', icon: '💼', label: '商机' },
+  { id: '5', icon: '📊', label: '仪表板' },
+  { id: '6', icon: '📦', label: '产品' },
+  { id: '7', icon: '⚙️', label: '系统' },
 ];
 
 const modules = [
@@ -22,8 +25,32 @@ const modules = [
   { icon: '📊', name: '仪表板', links: [] },
 ];
 
+function SortableItem({ id, icon, label }: { id: string; icon: string; label: string }) {
+  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id });
+  const style = { transform: CSS.Transform.toString(transform), transition };
+  return (
+    <div ref={setNodeRef} style={style} className="drag-item" {...attributes} {...listeners}>
+      <span className="drag-handle">⋮⋮</span>
+      <span>{icon}</span>
+      <span>{label}</span>
+    </div>
+  );
+}
+
 export default function ModuleSettingsPage() {
+  const [navItems, setNavItems] = useState(initNavItems);
   const [toggles, setToggles] = useState(() => Object.fromEntries(modules.map(m => [m.name, true])));
+
+  const handleDragEnd = (e: DragEndEvent) => {
+    const { active, over } = e;
+    if (over && active.id !== over.id) {
+      setNavItems(items => {
+        const oldIdx = items.findIndex(i => i.id === active.id);
+        const newIdx = items.findIndex(i => i.id === over.id);
+        return arrayMove(items, oldIdx, newIdx);
+      });
+    }
+  };
 
   const middlePanel = (
     <>
@@ -31,15 +58,15 @@ export default function ModuleSettingsPage() {
         <h3>主导航配置</h3>
         <Toggle active onChange={() => {}} />
       </div>
-      <div className="drag-list">
-        {navItems.map(n => (
-          <div key={n.label} className="drag-item">
-            <span className="drag-handle">⋮⋮</span>
-            <span>{n.icon}</span>
-            <span>{n.label}</span>
+      <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+        <SortableContext items={navItems} strategy={verticalListSortingStrategy}>
+          <div className="drag-list">
+            {navItems.map(n => (
+              <SortableItem key={n.id} {...n} />
+            ))}
           </div>
-        ))}
-      </div>
+        </SortableContext>
+      </DndContext>
     </>
   );
 

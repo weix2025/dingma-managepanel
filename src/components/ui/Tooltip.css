@@ -1,0 +1,8 @@
+.tooltip-content {
+  padding: 6px 12px; border-radius: var(--radius-sm); font-size: 12px;
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  color: var(--text-primary); box-shadow: var(--shadow-md);
+  animation: tooltipIn 0.15s ease;
+}
+.tooltip-arrow { fill: var(--bg-card); }
+@keyframes tooltipIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
