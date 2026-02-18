@@ -1,0 +1,17 @@
+.admin-navbar {
+  height: 56px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+.admin-breadcrumb { font-size: 13px; color: var(--text-muted); }
+.admin-navbar-right { display: flex; align-items: center; gap: 12px; }
+.admin-nav-btn {
+  padding: 4px 10px; border-radius: var(--radius-sm); font-size: 12px;
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  color: var(--text-secondary); cursor: pointer;
+}
+.admin-avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--gradient-brand); color: #fff; font-size: 13px; font-weight: 600;
+}

@@ -1,0 +1,6 @@
+.crm-three-col { display: flex; height: 100vh; overflow: hidden; }
+.crm-three-col .middle-panel {
+  background: var(--bg-secondary); border-right: 1px solid var(--border-color);
+  display: flex; flex-direction: column; height: 100vh; overflow-y: auto;
+}
+.crm-three-col .main-panel { flex: 1; overflow-y: auto; }

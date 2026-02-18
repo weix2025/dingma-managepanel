@@ -1,0 +1,27 @@
+.api-layout { display: flex; min-height: calc(100vh - 120px); }
+.api-sidebar {
+  width: 240px; min-width: 240px; padding: 24px 16px;
+  border-right: 1px solid var(--border-color); overflow-y: auto;
+}
+.api-sidebar h4 { font-size: 12px; color: var(--text-muted); margin: 16px 0 8px; }
+.api-sidebar a {
+  display: block; padding: 6px 12px; border-radius: var(--radius-sm);
+  font-size: 13px; color: var(--text-secondary); text-decoration: none;
+}
+.api-sidebar a:hover { background: var(--bg-card); color: var(--text-primary); }
+.api-content { flex: 1; padding: 32px 40px; }
+.api-content h1 { font-size: 24px; margin-bottom: 16px; }
+.api-endpoint {
+  padding: 16px; background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius-md); margin-bottom: 12px;
+}
+.api-method {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  font-size: 11px; font-weight: 700; margin-right: 8px;
+}
+.api-method.get { background: rgba(34,197,94,0.15); color: var(--accent-green); }
+.api-method.post { background: rgba(59,130,246,0.15); color: var(--accent-blue); }
+.api-method.put { background: rgba(245,158,11,0.15); color: var(--accent-orange); }
+.api-method.delete { background: rgba(239,68,68,0.15); color: var(--accent-red); }
+.api-path { font-size: 13px; font-family: monospace; color: var(--text-primary); }
+.api-desc { font-size: 12px; color: var(--text-muted); margin-top: 6px; }

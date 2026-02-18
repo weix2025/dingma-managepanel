@@ -1,0 +1,19 @@
+.crm-topbar {
+  height: 50px; background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  display: flex; align-items: center; justify-content: flex-end;
+  padding: 0 20px; gap: 12px; flex-shrink: 0;
+}
+.topbar-icon {
+  width: 32px; height: 32px; display: flex; align-items: center;
+  justify-content: center; border-radius: var(--radius-sm);
+  cursor: pointer; color: var(--text-secondary); transition: all 0.2s;
+}
+.topbar-icon:hover { background: var(--bg-card); color: var(--text-primary); }
+.topbar-icon svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+.theme-toggle {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm); color: var(--text-secondary);
+  font-size: 13px; padding: 5px 12px; cursor: pointer; transition: var(--transition);
+}
+.theme-toggle:hover { border-color: var(--border-hover); color: var(--text-primary); }

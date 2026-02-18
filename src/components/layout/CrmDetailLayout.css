@@ -1,0 +1,21 @@
+.crm-detail-topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px; background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100;
+}
+.crm-detail-topbar-left { display: flex; align-items: center; gap: 14px; }
+.crm-detail-back {
+  display: flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: var(--radius-sm);
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  color: var(--text-secondary); text-decoration: none; font-size: 18px; transition: all 0.2s;
+}
+.crm-detail-back:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+.crm-detail-title { font-size: 15px; font-weight: 600; }
+.crm-detail-title span { color: var(--text-muted); font-weight: 400; }
+.crm-detail-layout { display: flex; height: calc(100vh - 63px); }
+.crm-detail-left {
+  width: 380px; min-width: 380px; background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color); overflow-y: auto; padding: 20px;
+}
+.crm-detail-right { flex: 1; overflow-y: auto; padding: 20px 24px; background: var(--bg-primary); }

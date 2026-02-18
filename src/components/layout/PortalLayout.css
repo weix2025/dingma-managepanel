@@ -1,0 +1,2 @@
+.portal-layout { min-height: 100vh; padding-top: 60px; }
+.portal-content { min-height: calc(100vh - 60px); }

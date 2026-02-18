@@ -1,0 +1,13 @@
+.search-input {
+  display: flex; align-items: center;
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm); padding: 0 10px; height: 32px;
+}
+.search-input svg { width: 14px; height: 14px; stroke: var(--text-muted); fill: none; stroke-width: 2; flex-shrink: 0; }
+.search-input input {
+  background: none; border: none; outline: none;
+  color: var(--text-primary); font-size: 12.5px;
+  margin-left: 6px; width: 100%;
+}
+.search-input input::placeholder { color: var(--text-muted); }
+.search-input:focus-within { border-color: var(--accent-blue); }

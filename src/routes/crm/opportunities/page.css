@@ -1,0 +1,16 @@
+.opp-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.opp-header-actions { display: flex; gap: 10px; }
+.opp-filter-bar {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap;
+}
+.opp-view-select {
+  padding: 6px 12px; border-radius: var(--radius-sm); font-size: 13px;
+  background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-primary);
+}
+.opp-ops { display: flex; gap: 10px; }
+.opp-ops button {
+  background: none; border: none; color: var(--accent-blue);
+  font-size: 12.5px; cursor: pointer; padding: 0;
+}
+.opp-ops button:hover { opacity: 0.75; }
+.opp-ops button.danger { color: var(--accent-red); }

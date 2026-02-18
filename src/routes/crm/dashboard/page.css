@@ -1,0 +1,24 @@
+.dash-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 20px; flex-wrap: wrap; gap: 12px;
+}
+.dash-header-left { display: flex; align-items: center; gap: 12px; }
+.dash-badge {
+  padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600;
+  background: var(--gradient-brand); color: #fff;
+}
+.dash-update {
+  font-size: 11px; color: var(--accent-green); background: rgba(34,197,94,0.1);
+  padding: 2px 8px; border-radius: 10px;
+}
+.chart-grid { display: grid; gap: 16px; }
+.chart-grid.cols-1 { grid-template-columns: 1fr; }
+.chart-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.chart-card {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius-md); padding: 18px; transition: border-color 0.2s;
+}
+.chart-card:hover { border-color: var(--border-hover); }
+.chart-card-title { font-size: 13px; font-weight: 600; margin-bottom: 16px; }
+.chart-box { width: 100%; height: 220px; }
+.chart-box.tall { height: 280px; }

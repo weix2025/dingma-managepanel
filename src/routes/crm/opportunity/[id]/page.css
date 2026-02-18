@@ -1,0 +1,15 @@
+.detail-info-title {
+  font-size: 14px; font-weight: 600; margin-bottom: 16px;
+  padding-bottom: 10px; border-bottom: 1px solid var(--border-color);
+}
+.detail-info-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 8px 0; border-bottom: 1px solid var(--border-color);
+}
+.detail-info-label { font-size: 12.5px; color: var(--text-muted); flex-shrink: 0; width: 120px; }
+.detail-info-value { font-size: 13px; color: var(--text-primary); text-align: right; flex: 1; }
+.detail-tab-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 20px; flex-wrap: wrap; gap: 12px;
+}
+.detail-tab-actions { display: flex; gap: 10px; align-items: center; }

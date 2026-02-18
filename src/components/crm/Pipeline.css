@@ -1,0 +1,31 @@
+.pipeline-container {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 24px;
+}
+.pipeline {
+  display: flex; align-items: center; justify-content: space-between; position: relative;
+}
+.pipeline-step {
+  display: flex; flex-direction: column; align-items: center;
+  position: relative; z-index: 2; flex: 1;
+}
+.pipeline-circle {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 600; margin-bottom: 8px;
+  background: var(--bg-card); color: var(--text-muted);
+  border: 2px solid var(--border-color);
+}
+.pipeline-circle.done {
+  background: var(--accent-blue); color: #fff; border-color: var(--accent-blue);
+}
+.pipeline-circle.current {
+  background: rgba(59,130,246,0.15); color: var(--accent-blue); border-color: var(--accent-blue);
+}
+.pipeline-step-label { font-size: 12px; color: var(--text-secondary); white-space: nowrap; }
+.pipeline-line {
+  position: absolute; top: 18px; left: 0; right: 0; height: 3px; z-index: 1;
+}
+.pipeline-line-inner {
+  position: absolute; height: 3px; background: var(--accent-blue); top: 0;
+}

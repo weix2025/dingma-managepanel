@@ -1,0 +1,19 @@
+.portal-footer {
+  border-top: 1px solid var(--border-color); padding: 40px 32px 20px;
+  background: var(--bg-secondary);
+}
+.portal-footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px;
+  margin-bottom: 24px;
+}
+.portal-footer-brand p { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+.portal-footer-grid h4 { font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+.portal-footer-grid a {
+  display: block; font-size: 13px; color: var(--text-secondary);
+  text-decoration: none; margin-bottom: 8px;
+}
+.portal-footer-grid a:hover { color: var(--text-primary); }
+.portal-footer-bottom {
+  text-align: center; font-size: 12px; color: var(--text-muted);
+  padding-top: 16px; border-top: 1px solid var(--border-color);
+}
